@@ -6,7 +6,7 @@ The project will start with simple Python code and gradually add APIs, document 
 
 ## Current status
 
-Phase 5: document ingestion
+Phase 10: deployment-ready MVP
 
 ## Run the project
 
@@ -35,3 +35,17 @@ uvicorn api:app --reload
 The API includes a health check at `/health`, along with endpoints for listing and creating tickets.
 
 Support documents can be placed in the `documents` folder as `.txt` files. The `/documents/chunks` endpoint reads those files, splits them into smaller pieces, and keeps the source filename with each piece.
+
+## Assistant endpoints
+
+- `POST /assistant/ask` routes a question to ticket lookup or document search.
+- `GET /evaluation` runs a small retrieval evaluation set.
+
+The current search implementation uses local TF-IDF vectors, so the project works without an external API key. The retrieval layer can later be replaced with neural embeddings and a hosted vector database.
+
+## Run with Docker
+
+```bash
+docker build -t supportops-ai .
+docker run -p 8080:8080 supportops-ai
+```
