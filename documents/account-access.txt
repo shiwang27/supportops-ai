@@ -1,0 +1,9 @@
+Account access
+
+If a customer cannot sign in, first ask them to check that they are using the email address connected to their account.
+
+If the password was forgotten, the customer can use the password reset link on the sign-in page. The reset email may take a few minutes to arrive. They should also check their spam or junk folder.
+
+If the reset link has expired, the customer should request a new link. Reset links can only be used once.
+
+If the customer still cannot sign in after resetting the password, collect the account email and the exact error message. Do not ask the customer to share their password.
