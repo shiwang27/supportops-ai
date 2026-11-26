@@ -6,3 +6,4 @@ venv/
 .vscode/
 tickets.json
 ROADMAP.md
+*.log
