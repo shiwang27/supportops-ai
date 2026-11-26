@@ -6,7 +6,7 @@ The project will start with simple Python code and gradually add APIs, document 
 
 ## Current status
 
-Phase 10: deployment-ready MVP
+Working MVP: ticket API, document search, and grounded assistant
 
 ## Run the project
 
@@ -41,7 +41,9 @@ Support documents can be placed in the `documents` folder as `.txt` files. The `
 - `POST /assistant/ask` routes a question to ticket lookup or document search.
 - `GET /evaluation` runs a small retrieval evaluation set.
 
-The current search implementation uses local TF-IDF vectors, so the project works without an external API key. The retrieval layer can later be replaced with neural embeddings and a hosted vector database.
+The current search implementation uses local TF-IDF vectors, so the project works without an external API key. The assistant returns retrieved support text with source filenames. A later upgrade can replace this local retrieval layer with neural embeddings and a hosted vector database.
+
+This is a working learning MVP. It does not claim to be a production system yet: ticket data is stored in a local JSON file, and the assistant uses retrieved text instead of an external language model.
 
 ## Run with Docker
 
